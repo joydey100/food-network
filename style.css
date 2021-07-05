@@ -1,5 +1,7 @@
 /* ===== Some Global CSS ===== */
 body {
+  margin: 0;
+  padding: 0;
   font-family: "Poppins", sans-serif;
 }
 a {
@@ -22,4 +24,11 @@ section {
   width: 50%;
 }
 
-/* ===== Section Start ===== */ ;
+/* ===== Banner Section Start ===== */
+
+/* ===== About Section Start ===== */
+.about-section {
+  background-image: url(images/banner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
