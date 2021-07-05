@@ -23,6 +23,18 @@ section {
 .width-50 {
   width: 50%;
 }
+/*  30% Width */
+.width-30 {
+  width: 30%;
+}
+/* Margin  Right 3% */
+.mr-3 {
+  margin-right: 3%;
+}
+/* text-center */
+.text-center {
+  text-align: center;
+}
 
 /* ===== Banner Section Start ===== */
 
