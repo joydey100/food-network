@@ -46,6 +46,25 @@ section {
   text-align: center;
 }
 
+/* Navbar area */
+.navbar-area {
+  padding: 10px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  display: inline-block;
+  font-size: 18px;
+}
+
 /* ===== Banner Section  ===== */
 
 /* ===== About Section  ===== */
