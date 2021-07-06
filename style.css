@@ -37,6 +37,10 @@ section {
 .width-30 {
   width: 30%;
 }
+/* 45% Width */
+.width-45 {
+  width: 45%;
+}
 /* Margin  Right 3% */
 .mr-3 {
   margin-right: 3%;
@@ -72,6 +76,13 @@ nav ul li a {
   background-image: url(images/banner.png);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+/*  =====Testimonial Section =====  */
+.testiomonal-items-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* ===== Footer Section  ===== */
