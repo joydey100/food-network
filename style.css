@@ -6,12 +6,16 @@ body {
 }
 h1,
 h2,
-h3 {
+h3,
+p {
   margin: 0;
   padding: 0;
 }
 a {
   text-decoration: none;
+}
+span {
+  color: #fd4b2e;
 }
 img {
   display: block;
@@ -53,7 +57,7 @@ section {
 
 /* ===== Footer Section  ===== */
 footer {
-  background-image: linear-gradient(45deg, #fe4a2ebd, #d35e04);
-  padding: 35px;
+  background-color: #0b0d17;
+  padding: 55px 0 100px;
   color: #f8f8f8;
 }
