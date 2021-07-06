@@ -114,7 +114,7 @@ nav ul li a {
 }
 .about-right p {
   margin: 10px 0;
-  color: #1b191f;
+  color: #757575;
   font-size: 18px;
 }
 
@@ -217,6 +217,9 @@ nav ul li a {
 }
 
 /* ===== FAQ Section ===== */
+.faq-container {
+  align-items: stretch;
+}
 .faq-section {
   background-image: url(images/half-circle.png);
   background-repeat: no-repeat;
