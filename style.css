@@ -1,8 +1,15 @@
 /* ===== Some Global CSS ===== */
+* {
+  list-style: none;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
 }
 h1,
 h2,
@@ -23,7 +30,7 @@ img {
   object-fit: cover;
 }
 section {
-  padding: 100px 80px;
+  padding: 120px 80px;
 }
 /*  Flex */
 .d-flex {
@@ -71,24 +78,160 @@ section {
 }
 
 /* ===== Navbar area ===== */
-.navbar-area {
-  padding: 10px 80px;
+/* Start of Main Menu */
+nav {
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
+  min-height: 70px;
+  z-index: 99999;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  padding: 0 80px;
 }
-
+nav .logo h2 a {
+  color: #fff;
+  letter-spacing: 2px;
+}
 nav ul {
-  list-style: none;
-}
-nav ul li {
-  margin: 0 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 nav ul li a {
+  margin-right: 20px;
+  color: #000;
+  transition: 0.5s ease;
+}
+nav ul li:hover a {
+  color: #fd4b2e;
+}
+
+/*Toggle Bar */
+.toggle {
+  display: none;
+}
+.toggle span {
+  width: 50px;
+  height: 50px;
+  display: block;
+  background: #fd4b2e;
+  transition: 0.5s ease;
+  cursor: pointer;
+  position: relative;
+}
+.toggle span i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 24px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+/* End of Main Menu */
+
+/*Naviagation Menu*/
+.navigation {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: -100%;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.navigation .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  background: #fd4b2e;
+  text-align: center;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.navigation .close-btn span {
   display: inline-block;
-  font-size: 18px;
-  color: #575757;
-  font-weight: 500;
+  position: relative;
+}
+.navigation .close-btn span i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 25px;
+}
+.navigation ul {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 100%;
+}
+.navigation ul li {
+  position: relative;
+  padding-left: 10px;
+  width: 100%;
+}
+.navigation ul li:hover {
+  background: #fd4b2e;
+}
+.navigation ul li:hover .icon,
+.navigation ul li:hover .title {
+  color: #fff;
+}
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  width: 100%;
+  color: #fff;
+}
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+
+/* End of Navigation Menu */
+
+/*Responsive view*/
+
+@media (max-width: 767px) {
+  html {
+    overflow-x: hidden;
+    touch-action: none;
+  }
+  nav ul {
+    display: none;
+  }
+  .toggle {
+    display: block;
+  }
 }
 
 /* ===== Banner Section  ===== */
@@ -100,6 +243,9 @@ nav ul li a {
   font-size: 18px;
   color: #828282;
   margin: 12px 0;
+}
+.banner-section {
+  padding-top: 180px;
 }
 
 /* ===== About Section  ===== */
@@ -263,4 +409,47 @@ footer p {
   color: #f8f8f8;
   font-size: 18px;
   margin-right: 14px;
+}
+
+/* CSS Media Query */
+@media only screen and (max-width: 991px) {
+  section {
+    padding: 120px 40px;
+  }
+  .banner-section {
+    flex-direction: column-reverse;
+  }
+  .width-50,
+  .width-45,
+  .width-30 {
+    width: 100%;
+  }
+  .banner-right img {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+  }
+  .banner-left {
+    margin-top: 30px;
+  }
+  .about-section,
+  .counter-section,
+  .testiomonal-items-container,
+  .faq-container {
+    flex-direction: column;
+  }
+
+  .recipie-items-container {
+    flex-direction: column;
+  }
+  .counter-item {
+    margin-top: 20px;
+    margin-right: 0;
+  }
+  .testimonial-item {
+    text-align: center;
+  }
+  .testimonial-item img {
+    margin: 20px auto;
+  }
 }

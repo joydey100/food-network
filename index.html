@@ -20,19 +20,81 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Home meu Area/ Navbar Area -->
-    <div class="navbar-area">
-      <a href="#" class="logo"> <img src="images/logo.svg" alt="logo" /></a>
-      <nav>
-        <ul class="d-flex">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Recipie</a></li>
-          <li><a href="#">Testimonial</a></li>
-          <li><a href="#">FAQ</a></li>
-        </ul>
-      </nav>
+    <!-- Start of Main Menu -->
+
+    <nav>
+      <div class="logo">
+        <a href="#"> <img src="images/logo.svg" alt="logo" /> </a>
+      </div>
+
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#recipies">Recipies</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <div class="toggle" onclick="openNav();">
+        <span> <i class="fas fa-bars"></i> </span>
+      </div>
+    </nav>
+
+    <!-- End  of Main Menu -->
+
+    <!-- Start of Navigation Menu -->
+
+    <div id="navigation" class="navigation">
+      <div class="close-btn" onclick="closeNav();">
+        <span class="closebtn">
+          <i class="fas fa-times"></i>
+        </span>
+      </div>
+      <ul>
+        <li>
+          <a href="#" onclick="closeNav();">
+            <span class="icon">
+              <i class="fa fa-home" aria-hidden="true"></i>
+            </span>
+            <span class="title"> Home</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#about" onclick="closeNav();">
+            <span class="icon">
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </span>
+            <span class="title"> About</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#recipies" onclick="closeNav();">
+            <span class="icon"> <i class="fas fa-pizza-slice"></i> </span>
+            <span class="title"> Recipies</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#feedback" onclick="closeNav();">
+            <span class="icon">
+              <i class="fas fa-comment-alt"></i>
+            </span>
+            <span class="title"> Feedback</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#faq" onclick="closeNav();">
+            <span class="icon"> <i class="far fa-question-circle"></i></span>
+            <span class="title"> FAQ</span>
+          </a>
+        </li>
+      </ul>
     </div>
+
+    <!-- End of Naviagation Menu -->
     <!-- Banner Section  -->
     <section class="banner-section d-flex">
       <div class="banner-left width-50">
@@ -57,7 +119,7 @@
     </section>
 
     <!-- About Section  -->
-    <section class="about-section d-flex">
+    <section class="about-section d-flex" id="about">
       <div class="about-left width-50">
         <img src="images/about.png" alt="About Chef" />
       </div>
@@ -81,7 +143,7 @@
     </section>
 
     <!-- Recipies Section  -->
-    <section class="recipie-section">
+    <section class="recipie-section" id="recipies">
       <div class="top-content text-center">
         <h2>My Recipies</h2>
         <p>
@@ -140,7 +202,7 @@
     </section>
 
     <!-- Testimonial Section -->
-    <section class="testiimonial-section">
+    <section class="testiimonial-section" id="feedback">
       <div class="top-content text-center">
         <h2>Clients Feedback</h2>
         <p>
@@ -171,7 +233,7 @@
     </section>
 
     <!--  FAQ Section -->
-    <section class="faq-section">
+    <section class="faq-section" id="faq">
       <div class="top-content text-center">
         <h2>Frequently Asked Question</h2>
         <p>
@@ -246,5 +308,16 @@
         </li>
       </ul>
     </footer>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+
+    <!-- Main JS -->
+    <script src="app.js"></script>
   </body>
 </html>
